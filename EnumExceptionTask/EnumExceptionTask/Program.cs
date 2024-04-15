@@ -28,7 +28,7 @@ namespace EnumExceptionTask
                 Console.WriteLine("2.Frontend");
                 Console.Write("Class type daxil edin: ");
             }
-            while (!byte.TryParse(Console.ReadLine(), out classType));
+            while (!(byte.TryParse(Console.ReadLine(), out classType) && (classType == 1 || classType == 2)) );
 
             Classroom classroom = new Classroom(className, (ClassType)classType);
 
